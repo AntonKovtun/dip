@@ -1,0 +1,1 @@
+ALTER TABLE notification ADD USER_TYPE character varying(32);

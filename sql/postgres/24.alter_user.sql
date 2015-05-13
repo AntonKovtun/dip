@@ -1,0 +1,1 @@
+ALTER TABLE USERS ADD LOGIN character varying(128);

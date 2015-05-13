@@ -1,0 +1,1 @@
+ALTER TABLE USERS ADD IS_FAKE char(1) default 'N' NOT NULL;

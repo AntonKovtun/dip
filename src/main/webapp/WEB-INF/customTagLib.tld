@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd"
+        version="2.1">
+    <tlib-version>1.0</tlib-version>
+    <short-name>iam</short-name>
+    <uri>http://sulin.ru/taglibs</uri>
+    <function>
+        <name>hasAccess</name>
+        <function-class>com.sulin.frontend.web.util.CustomFunctions</function-class>
+        <function-signature>boolean hasAccess(javax.servlet.http.HttpServletRequest, java.lang.String)</function-signature>
+    </function>
+    <function>
+        <name>hasRole</name>
+        <function-class>com.sulin.frontend.web.util.CustomFunctions</function-class>
+        <function-signature>boolean hasRole(javax.servlet.http.HttpServletRequest, java.lang.String)</function-signature>
+    </function>
+    <function>
+        <name>isAuthenticated</name>
+        <function-class>com.sulin.frontend.web.util.CustomFunctions</function-class>
+        <function-signature>boolean isAuthenticated(javax.servlet.http.HttpServletRequest)</function-signature>
+    </function>
+</taglib>
