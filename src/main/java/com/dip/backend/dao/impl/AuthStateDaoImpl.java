@@ -1,7 +1,7 @@
-package com.sulin.backend.dao.impl;
+package com.dip.backend.dao.impl;
 
-import com.sulin.backend.dao.IAuthStateDao;
-import com.sulin.backend.domain.AuthStateEntity;
+import com.dip.backend.dao.IAuthStateDao;
+import com.dip.backend.domain.AuthStateEntity;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -14,10 +14,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import static org.hibernate.criterion.Restrictions.eq;
 
-/**
- * Created by: Alexander Duckardt
- * Date: 8/3/14.
- */
+
 @Repository
 public class AuthStateDaoImpl implements IAuthStateDao {
     private final Logger log = LoggerFactory.getLogger(this.getClass());

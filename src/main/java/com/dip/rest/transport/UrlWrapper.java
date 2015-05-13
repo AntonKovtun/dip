@@ -1,4 +1,4 @@
-package com.sulin.rest.transport;
+package com.dip.rest.transport;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URI;
@@ -9,15 +9,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Vector;
 
-/**
- * An object which represents a simple URL. Once an object is instantiated, path
- * components and parameters can be added. Once all of the elements are in
- * place, the object can be serialized into a string. This class is used by
- * internal classes and not by clients directly.
- *
- * @author Alexander Dukkadrt
- *
- */
+
 public class UrlWrapper {
     private String base;
     private List<String> components;

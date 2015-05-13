@@ -4,7 +4,7 @@
 <html>
 <head>
     <%@include file="../include/header.jsp"%>
-    <title>Вход - sulin</title>
+    <title>Вход - dip</title>
 
     <script src="${applicationScope.resourceServerUrl}js/page/login.js"></script>
 </head>

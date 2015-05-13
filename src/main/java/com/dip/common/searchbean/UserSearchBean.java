@@ -1,13 +1,10 @@
-package com.sulin.common.searchbean;
+package com.dip.common.searchbean;
 
-import com.sulin.common.constant.Status;
-import com.sulin.common.constant.UserType;
+import com.dip.common.constant.Status;
+import com.dip.common.constant.UserType;
 
 import java.util.List;
 
-/**
- * Created by andrew
- */
 public class UserSearchBean extends AbstractSearchBean<String> {
     private String name;
     private String description;

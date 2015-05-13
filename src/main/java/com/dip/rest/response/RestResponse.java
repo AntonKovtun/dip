@@ -1,4 +1,4 @@
-package com.sulin.rest.response;
+package com.dip.rest.response;
 
 import java.io.Serializable;
 

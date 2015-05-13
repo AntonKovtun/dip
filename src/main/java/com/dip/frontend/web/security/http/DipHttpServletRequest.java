@@ -1,24 +1,24 @@
-package com.sulin.frontend.web.security.http;
+package com.dip.frontend.web.security.http;
 
-import com.sulin.frontend.web.util.XSSUtils;
+import com.dip.frontend.web.util.XSSUtils;
 import org.apache.log4j.Logger;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletRequestWrapper;
 import java.util.*;
 
-public class SulinHttpServletRequest extends HttpServletRequestWrapper {
+public class DipHttpServletRequest extends HttpServletRequestWrapper {
 	
-	private static Logger LOG = Logger.getLogger(SulinHttpServletRequest.class);
+	private static Logger LOG = Logger.getLogger(DipHttpServletRequest.class);
 
 	private boolean preventXSS;
 	private Map<String, String[]> xssSafeParams;
 	
-	public SulinHttpServletRequest(final HttpServletRequest request) {
+	public DipHttpServletRequest(final HttpServletRequest request) {
 		super(request);
 	}
 
-	public SulinHttpServletRequest(final HttpServletRequest request, final boolean preventXSS) {
+	public DipHttpServletRequest(final HttpServletRequest request, final boolean preventXSS) {
 		super(request);
 		this.preventXSS = preventXSS;
 	}

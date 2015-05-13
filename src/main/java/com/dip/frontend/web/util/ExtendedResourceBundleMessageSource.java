@@ -1,4 +1,4 @@
-package com.sulin.frontend.web.util;
+package com.dip.frontend.web.util;
 
 import org.springframework.context.support.ReloadableResourceBundleMessageSource;
 
@@ -7,10 +7,7 @@ import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
 
-/**
- * Created by: Alexander Duckardt
- * Date: 3/11/14.
- */
+
 public class ExtendedResourceBundleMessageSource extends ReloadableResourceBundleMessageSource {
 
     public Map<String, String> getMessagesMap(Locale locale){

@@ -1,4 +1,4 @@
-package com.sulin.common.service.task;
+package com.dip.common.service.task;
 
 
 /**

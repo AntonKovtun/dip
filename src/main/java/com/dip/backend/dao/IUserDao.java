@@ -1,7 +1,7 @@
-package com.sulin.backend.dao;
+package com.dip.backend.dao;
 
-import com.sulin.backend.domain.UserEntity;
-import com.sulin.common.searchbean.UserSearchBean;
+import com.dip.backend.domain.UserEntity;
+import com.dip.common.searchbean.UserSearchBean;
 
 /**
  * Created by: andrew

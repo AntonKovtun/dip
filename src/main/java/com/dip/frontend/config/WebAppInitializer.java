@@ -1,4 +1,4 @@
-package com.sulin.frontend.config;
+package com.dip.frontend.config;
 
 import java.util.Set;
 
@@ -12,12 +12,8 @@ import org.springframework.web.context.support.AnnotationConfigWebApplicationCon
 import org.springframework.web.servlet.DispatcherServlet;
 import org.springframework.web.util.Log4jConfigListener;
 
-import com.sulin.frontend.web.interceptor.SulinUrlFilter;
+import com.dip.frontend.web.interceptor.DipUrlFilter;
 
-/**
- * @author Alexander Duckardt
- * 
- */
 public class WebAppInitializer implements WebApplicationInitializer {
 
     /*
@@ -34,13 +30,13 @@ public class WebAppInitializer implements WebApplicationInitializer {
         servletContext.setInitParameter("spring.profiles.default", "local");
         servletContext.addListener(new Log4jConfigListener());
         AnnotationConfigWebApplicationContext appContext = new AnnotationConfigWebApplicationContext();
-        appContext.scan("com.sulin.common.config", "com.sulin.backend.config", "com.sulin.frontend.config");
+        appContext.scan("com.dip.common.config", "com.dip.backend.config", "com.dip.frontend.config");
 
         servletContext.addListener(new ContextLoaderListener(appContext));
 
-        servletContext.addFilter("SulinUrlFilter", SulinUrlFilter.class).addMappingForUrlPatterns(null, false, "/*");
+        servletContext.addFilter("DipUrlFilter", DipUrlFilter.class).addMappingForUrlPatterns(null, false, "/*");
 
-        ServletRegistration.Dynamic appServlet = servletContext.addServlet("Sulin", new DispatcherServlet(appContext));
+        ServletRegistration.Dynamic appServlet = servletContext.addServlet("Dip", new DispatcherServlet(appContext));
         appServlet.setLoadOnStartup(1);
 
 //        appServlet.setMultipartConfig(new MultipartConfigElement(System

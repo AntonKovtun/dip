@@ -4,7 +4,7 @@
 <head>
     <%@include file="../include/header.jsp"%>
     
-    <title><fmt:message key="sulin.ui.users.title" /> - <fmt:message key="sulin.ui.title" /></title>
+    <title><fmt:message key="dip.ui.users.title" /> - <fmt:message key="dip.ui.title" /></title>
     
     <script src="${applicationScope.resourceServerUrl}js/page/users.js"></script>
 </head>
@@ -14,10 +14,10 @@
     <div class="container min_H_400">
         <input type="hidden" id="userType" value="${requestScope.userRole}">
 
-        <h4 class="pull-left"><fmt:message key="sulin.ui.users.title" /></h4>
-        <c:if test="${sulin:hasRole(pageContext.request, 'SuperAdmin')
-                        or sulin:hasRole(pageContext.request, 'SchoolAdmin')
-                        or sulin:hasRole(pageContext.request, 'RegistrarAccounts')}" >
+        <h4 class="pull-left"><fmt:message key="dip.ui.users.title" /></h4>
+        <c:if test="${dip:hasRole(pageContext.request, 'SuperAdmin')
+                        or dip:hasRole(pageContext.request, 'SchoolAdmin')
+                        or dip:hasRole(pageContext.request, 'RegistrarAccounts')}" >
             <button class="btn btn-primary pull-right" id="add">Добавить</button>
         </c:if>
 
@@ -36,7 +36,7 @@
                     <c:if test="${selectedOrganization != 'disabled'}">
                         <option value="disabled">--Выберите тип пользователя--</option>
 
-                        <c:if test="${sulin:hasRole(pageContext.request, 'SuperAdmin')}">
+                        <c:if test="${dip:hasRole(pageContext.request, 'SuperAdmin')}">
                             <option value="SuperAdmin">Администратор</option>
                             <option value="RegistrarAccounts">Регистратор аккаунтов</option>
                             <option value="Onlooker">Наблюдатель</option>
@@ -49,7 +49,7 @@
                             <option value="Other">Другой</option>
                         </c:if>
 
-                        <c:if test="${sulin:hasRole(pageContext.request, 'RegistrarAccounts')}">
+                        <c:if test="${dip:hasRole(pageContext.request, 'RegistrarAccounts')}">
                             <option value="RegistrarAccounts">Регистратор аккаунтов</option>
                             <option value="Onlooker">Наблюдатель</option>
                             <option value="ResponsibleForPayment">Ответственный за оплату</option>
@@ -61,8 +61,8 @@
                             <option value="Other">Другой</option>
                         </c:if>
 
-                        <c:if test="${sulin:hasRole(pageContext.request, 'SchoolAdmin') or sulin:hasRole(pageContext.request, 'Onlooker')
-                        or sulin:hasRole(pageContext.request, 'ResponsibleForPayment')}">
+                        <c:if test="${dip:hasRole(pageContext.request, 'SchoolAdmin') or dip:hasRole(pageContext.request, 'Onlooker')
+                        or dip:hasRole(pageContext.request, 'ResponsibleForPayment')}">
                             <option value="ResponsibleForPayment">Ответственный за оплату</option>
                             <option value="SchoolAdmin">Школьный администратор</option>
                             <option value="OperatorMarks">Наборщик оценок</option>
@@ -72,7 +72,7 @@
                             <option value="Other">Другой</option>
                         </c:if>
 
-                        <c:if test="${sulin:hasRole(pageContext.request, 'OperatorMarks')}">
+                        <c:if test="${dip:hasRole(pageContext.request, 'OperatorMarks')}">
                             <option value="Teacher">Учитель</option>
                             <option value="Parent">Родитель</option>
                             <option value="Scholar">Ученик</option>
@@ -114,19 +114,19 @@
     	<table class="table" id="tblUsers">
 		    <thead>
                 <tr>
-                    <c:if test="${sulin:hasRole(pageContext.request, 'SuperAdmin')
-                                or sulin:hasRole(pageContext.request, 'SchoolAdmin')
-                                or sulin:hasRole(pageContext.request, 'RegistrarAccounts')}" >
-                        <th><fmt:message key="sulin.ui.header.action"/></th>
+                    <c:if test="${dip:hasRole(pageContext.request, 'SuperAdmin')
+                                or dip:hasRole(pageContext.request, 'SchoolAdmin')
+                                or dip:hasRole(pageContext.request, 'RegistrarAccounts')}" >
+                        <th><fmt:message key="dip.ui.header.action"/></th>
                     </c:if>
-                    <th><fmt:message key="sulin.ui.header.surname"/></th>
-                    <th><fmt:message key="sulin.ui.header.email"/></th>
-                    <th><fmt:message key="sulin.ui.header.phone"/></th>
-                    <th><fmt:message key="sulin.ui.header.organization"/></th>
-                    <th><fmt:message key="sulin.ui.header.group"/></th>
-                    <th><fmt:message key="sulin.ui.header.description"/></th>
-                    <th><fmt:message key="sulin.ui.header.userType"/></th>
-                    <th><fmt:message key="sulin.ui.header.status"/></th>
+                    <th><fmt:message key="dip.ui.header.surname"/></th>
+                    <th><fmt:message key="dip.ui.header.email"/></th>
+                    <th><fmt:message key="dip.ui.header.phone"/></th>
+                    <th><fmt:message key="dip.ui.header.organization"/></th>
+                    <th><fmt:message key="dip.ui.header.group"/></th>
+                    <th><fmt:message key="dip.ui.header.description"/></th>
+                    <th><fmt:message key="dip.ui.header.userType"/></th>
+                    <th><fmt:message key="dip.ui.header.status"/></th>
                 </tr>
 		    </thead>
 		    

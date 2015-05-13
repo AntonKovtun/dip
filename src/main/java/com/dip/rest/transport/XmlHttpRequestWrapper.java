@@ -1,4 +1,4 @@
-package com.sulin.rest.transport;
+package com.dip.rest.transport;
 
 import java.util.HashMap;
 

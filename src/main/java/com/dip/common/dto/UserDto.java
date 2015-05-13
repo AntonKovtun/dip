@@ -1,14 +1,11 @@
-package com.sulin.common.dto;
+package com.dip.common.dto;
 
-import com.sulin.common.constant.Status;
-import com.sulin.common.constant.UserType;
+import com.dip.common.constant.Status;
+import com.dip.common.constant.UserType;
 
 import java.util.Date;
 import java.util.List;
 
-/**
- * Created by: andrew
- */
 public class UserDto {
     private String id;
     private String name;

@@ -1,4 +1,4 @@
-package com.sulin.backend.config;
+package com.dip.backend.config;
 
 import java.util.Properties;
 import java.util.concurrent.Executor;
@@ -27,15 +27,11 @@ import org.springframework.transaction.support.TransactionTemplate;
 import com.mchange.v2.c3p0.ComboPooledDataSource;
 import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 
-/**
- * Created with IntelliJ IDEA. User: alexander Date: 10/24/13 Time: 12:49 AM To
- * change this template use File | Settings | File Templates.
- */
 @Configuration
 @EnableTransactionManagement
 @EnableAsync
 @EnableScheduling
-@ComponentScan(basePackages = "com.sulin.backend")
+@ComponentScan(basePackages = "com.dip.backend")
 public class BackendConfig implements SchedulingConfigurer {
     @Autowired
     private IBackendProperties backendProperties;
@@ -122,7 +118,7 @@ public class BackendConfig implements SchedulingConfigurer {
         LocalSessionFactoryBean bean = new LocalSessionFactoryBean();
         bean.setDataSource(dataSource());
         bean.setHibernateProperties(getHibernateProperties());
-        bean.setPackagesToScan("com.sulin.backend.domain");
+        bean.setPackagesToScan("com.dip.backend.domain");
 
         return bean;
     }

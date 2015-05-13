@@ -1,11 +1,7 @@
-package com.sulin.common.dto;
+package com.dip.common.dto;
 
 import java.util.Date;
 
-/**
- * Created by: Alexander Duckardt
- * Date: 8/3/14.
- */
 public class AuthToken {
 
     private String userId;

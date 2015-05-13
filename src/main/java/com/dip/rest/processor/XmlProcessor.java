@@ -1,4 +1,4 @@
-package com.sulin.rest.processor;
+package com.dip.rest.processor;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -15,8 +15,8 @@ import javax.xml.transform.stream.StreamSource;
 
 import org.springframework.util.StringUtils;
 
-import com.sulin.rest.constant.ContentType;
-import com.sulin.rest.response.RestResponse;
+import com.dip.rest.constant.ContentType;
+import com.dip.rest.response.RestResponse;
 
 class XmlProcessor extends AbstractProcessor {
 

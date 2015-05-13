@@ -1,4 +1,4 @@
-package com.sulin.rest.client;
+package com.dip.rest.client;
 
 public interface RestAPIClient {
 }

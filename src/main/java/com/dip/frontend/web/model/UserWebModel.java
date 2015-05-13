@@ -1,13 +1,10 @@
-package com.sulin.frontend.web.model;
+package com.dip.frontend.web.model;
 
-import com.sulin.common.constant.UserType;
+import com.dip.common.constant.UserType;
 
 import java.util.List;
 
-/**
- * @author Eugene Tuysus 14 июля 2014 г.
- * 
- */
+
 public class UserWebModel extends ReferenceBookModel {
 
     private String email;

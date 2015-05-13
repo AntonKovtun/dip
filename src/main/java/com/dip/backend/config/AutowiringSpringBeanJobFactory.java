@@ -1,4 +1,4 @@
-package com.sulin.backend.config;
+package com.dip.backend.config;
 
 import org.quartz.spi.TriggerFiredBundle;
 import org.springframework.beans.factory.config.AutowireCapableBeanFactory;

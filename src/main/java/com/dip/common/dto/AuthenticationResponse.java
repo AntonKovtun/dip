@@ -1,12 +1,9 @@
-package com.sulin.common.dto;
+package com.dip.common.dto;
 
-import com.sulin.common.constant.ResponseStatus;
-import com.sulin.common.dto.response.ServiceResponse;
+import com.dip.common.constant.ResponseStatus;
+import com.dip.common.dto.response.ServiceResponse;
 
-/**
- * Created by: Alexander Duckardt
- * Date: 8/3/14.
- */
+
 public class AuthenticationResponse extends ServiceResponse {
 
     private long expirationTime;

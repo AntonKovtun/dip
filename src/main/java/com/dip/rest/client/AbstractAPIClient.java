@@ -1,4 +1,4 @@
-package com.sulin.rest.client;
+package com.dip.rest.client;
 
 import java.util.Deque;
 import java.util.HashMap;
@@ -10,12 +10,12 @@ import javax.annotation.PostConstruct;
 
 import org.apache.log4j.Logger;
 
-import com.sulin.rest.constant.ContentProcessorType;
-import com.sulin.rest.processor.AbstractProcessor;
-import com.sulin.rest.processor.ProcessorFactory;
-import com.sulin.rest.response.RestResponse;
-import com.sulin.rest.transport.HttpRequestWrapper;
-import com.sulin.rest.transport.UrlWrapper;
+import com.dip.rest.constant.ContentProcessorType;
+import com.dip.rest.processor.AbstractProcessor;
+import com.dip.rest.processor.ProcessorFactory;
+import com.dip.rest.response.RestResponse;
+import com.dip.rest.transport.HttpRequestWrapper;
+import com.dip.rest.transport.UrlWrapper;
 
 public abstract class AbstractAPIClient {
     protected final Logger log = Logger.getLogger(this.getClass());

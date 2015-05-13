@@ -1,12 +1,8 @@
-package com.sulin.backend.config;
+package com.dip.backend.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 
-/**
- * @author Sergei Barinov
- * 
- */
 public abstract class AbstractBackendProperties implements IBackendProperties {
     @Autowired
     protected Environment env;
@@ -199,7 +195,7 @@ public abstract class AbstractBackendProperties implements IBackendProperties {
     }
 
     public int getTokenLife() {
-        return env.getProperty("sulin.auth.token.life", Integer.class, 30);
+        return env.getProperty("dip.auth.token.life", Integer.class, 30);
     }
 
     public String getQiwiLogin() {
@@ -235,7 +231,7 @@ public abstract class AbstractBackendProperties implements IBackendProperties {
     }
 
     public String getIsTest() {
-        return env.getProperty("sulin.is.test");
+        return env.getProperty("dip.is.test");
     }
 
 }

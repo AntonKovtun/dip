@@ -1,6 +1,6 @@
-package com.sulin.rest.processor;
+package com.dip.rest.processor;
 
-import com.sulin.rest.constant.ContentProcessorType;
+import com.dip.rest.constant.ContentProcessorType;
 
 public class ProcessorFactory {
 

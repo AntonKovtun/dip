@@ -1,11 +1,11 @@
-package com.sulin.rest.processor;
+package com.dip.rest.processor;
 
 import java.util.HashMap;
 
-import com.sulin.rest.constant.ContentType;
-import com.sulin.rest.response.RestResponse;
-import com.sulin.rest.transport.HttpRequestWrapper;
-import com.sulin.rest.transport.UrlWrapper;
+import com.dip.rest.constant.ContentType;
+import com.dip.rest.response.RestResponse;
+import com.dip.rest.transport.HttpRequestWrapper;
+import com.dip.rest.transport.UrlWrapper;
 
 public abstract class AbstractProcessor {
     protected ContentType contentType = ContentType.Json;

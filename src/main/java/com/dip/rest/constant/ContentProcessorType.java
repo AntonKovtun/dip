@@ -1,4 +1,4 @@
-package com.sulin.rest.constant;
+package com.dip.rest.constant;
 
 public enum ContentProcessorType {
     Xml, Json, Qiwi;

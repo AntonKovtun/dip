@@ -1,8 +1,8 @@
-package com.sulin.rest.client.impl;
+package com.dip.rest.client.impl;
 
 import java.net.URLEncoder;
 
-import com.sulin.rest.client.AbstractAPIClient;
+import com.dip.rest.client.AbstractAPIClient;
 
 public abstract class QiwiApiClient extends AbstractAPIClient {
     private String baseUrl = "https://w.qiwi.com";

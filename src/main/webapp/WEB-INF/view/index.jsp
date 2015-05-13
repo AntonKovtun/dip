@@ -4,7 +4,7 @@
 <head>
     <%@include file="../include/header.jsp"%>
     
-    <title><fmt:message key="sulin.ui.title" /></title>
+    <title><fmt:message key="dip.ui.title" /></title>
 </head>
 <body>
 	<%@include file="../include/menu-top.jsp"%>

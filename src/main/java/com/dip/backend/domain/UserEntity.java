@@ -1,7 +1,7 @@
-package com.sulin.backend.domain;
+package com.dip.backend.domain;
 
-import com.sulin.common.constant.Status;
-import com.sulin.common.constant.UserType;
+import com.dip.common.constant.Status;
+import com.dip.common.constant.UserType;
 import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.FetchMode;
 import org.hibernate.annotations.Type;

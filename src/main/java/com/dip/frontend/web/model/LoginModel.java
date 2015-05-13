@@ -1,4 +1,4 @@
-package com.sulin.frontend.web.model;
+package com.dip.frontend.web.model;
 
 public class LoginModel extends AbstractDataModel {
     private static final long serialVersionUID = 1L;

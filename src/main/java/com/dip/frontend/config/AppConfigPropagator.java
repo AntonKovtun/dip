@@ -1,4 +1,4 @@
-package com.sulin.frontend.config;
+package com.dip.frontend.config;
 
 import javax.servlet.ServletContext;
 
@@ -6,12 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.ServletContextAware;
 
-import com.sulin.frontend.constant.CommonWebConstant;
+import com.dip.frontend.constant.CommonWebConstant;
 
-/**
- * @author Alexander Duckardt
- * 
- */
 @Component
 public class AppConfigPropagator implements ServletContextAware {
 

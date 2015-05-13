@@ -1,4 +1,4 @@
-package com.sulin.rest.client.impl;
+package com.dip.rest.client.impl;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
@@ -6,8 +6,8 @@ import java.util.LinkedHashMap;
 
 import org.springframework.stereotype.Service;
 
-import com.sulin.rest.client.WeatherAPIClient;
-import com.sulin.rest.response.WeatherResponse;
+import com.dip.rest.client.WeatherAPIClient;
+import com.dip.rest.response.WeatherResponse;
 
 @Service("weatherClient")
 public class WeatherClient extends WeatherApiClient implements WeatherAPIClient {

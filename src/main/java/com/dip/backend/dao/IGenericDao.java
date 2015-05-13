@@ -1,16 +1,13 @@
-package com.sulin.backend.dao;
+package com.dip.backend.dao;
 
-import com.sulin.backend.domain.BaseEntity;
-import com.sulin.common.searchbean.AbstractSearchBean;
+import com.dip.backend.domain.BaseEntity;
+import com.dip.common.searchbean.AbstractSearchBean;
 
 import java.io.Serializable;
 import java.util.Collection;
 import java.util.List;
 
-/**
- * Created with IntelliJ IDEA. User: alexander Date: 10/27/13 Time: 9:03 PM To
- * change this template use File | Settings | File Templates.
- */
+
 public interface IGenericDao<Entity extends BaseEntity, PrimaryKey extends Serializable, Query extends AbstractSearchBean> {
     Entity findById(PrimaryKey id);
 

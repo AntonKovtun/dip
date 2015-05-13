@@ -1,4 +1,4 @@
-package com.sulin.backend.domain;
+package com.dip.backend.domain;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -8,10 +8,7 @@ import javax.persistence.MappedSuperclass;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 
-/**
- * @author Sergei Barinov
- * 
- */
+
 @MappedSuperclass
 public abstract class BaseComplianceEntity extends BaseEntity {
     private static final long serialVersionUID = 1L;

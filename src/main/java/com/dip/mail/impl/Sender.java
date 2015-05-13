@@ -1,4 +1,4 @@
-package com.sulin.mail.impl;
+package com.dip.mail.impl;
 
 import java.util.Properties;
 

@@ -1,4 +1,4 @@
-package com.sulin.rest.response.bean;
+package com.dip.rest.response.bean;
 
 import java.io.Serializable;
 import java.util.Date;

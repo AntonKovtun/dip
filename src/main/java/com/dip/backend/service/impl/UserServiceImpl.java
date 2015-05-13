@@ -1,15 +1,15 @@
-package com.sulin.backend.service.impl;
+package com.dip.backend.service.impl;
 
-import com.sulin.backend.config.IBackendProperties;
-import com.sulin.backend.dao.IUserDao;
-import com.sulin.backend.domain.UserEntity;
-import com.sulin.backend.service.*;
-import com.sulin.common.constant.ErrorCodes;
-import com.sulin.common.constant.Status;
-import com.sulin.common.dto.UserDto;
-import com.sulin.common.exception.BasicServiceException;
-import com.sulin.common.searchbean.UserSearchBean;
-import com.sulin.frontend.web.model.UserWebModel;
+import com.dip.backend.config.IBackendProperties;
+import com.dip.backend.dao.IUserDao;
+import com.dip.backend.domain.UserEntity;
+import com.dip.backend.service.*;
+import com.dip.common.constant.ErrorCodes;
+import com.dip.common.constant.Status;
+import com.dip.common.dto.UserDto;
+import com.dip.common.exception.BasicServiceException;
+import com.dip.common.searchbean.UserSearchBean;
+import com.dip.frontend.web.model.UserWebModel;
 import org.apache.commons.collections.CollectionUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,9 +19,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.*;
 
-/**
- * Created by: andrew
- */
 @Service
 @Transactional
 public class UserServiceImpl implements IUserService {

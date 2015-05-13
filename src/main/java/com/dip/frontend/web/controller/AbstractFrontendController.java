@@ -1,8 +1,8 @@
-package com.sulin.frontend.web.controller;
+package com.dip.frontend.web.controller;
 
-import com.sulin.frontend.config.IFrontendProperties;
-import com.sulin.frontend.constant.CommonWebConstant;
-import com.sulin.frontend.web.security.SulinCookieProvider;
+import com.dip.frontend.config.IFrontendProperties;
+import com.dip.frontend.constant.CommonWebConstant;
+import com.dip.frontend.web.security.DipCookieProvider;
 import org.codehaus.jackson.JsonGenerationException;
 import org.codehaus.jackson.map.JsonMappingException;
 import org.codehaus.jackson.map.ObjectMapper;
@@ -16,16 +16,12 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-/**
- * @author Alexander Duckardt
- * 
- */
 public abstract class AbstractFrontendController {
     protected Logger log = LoggerFactory.getLogger(this.getClass());
     @Autowired
     protected IFrontendProperties frontendProperties;
     @Autowired
-    protected SulinCookieProvider cookieProvider;
+    protected DipCookieProvider cookieProvider;
     @Autowired
     private ObjectMapper mapper;
 

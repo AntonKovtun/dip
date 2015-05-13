@@ -1,4 +1,4 @@
-package com.sulin.rest.client.impl;
+package com.dip.rest.client.impl;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
@@ -8,9 +8,9 @@ import org.apache.commons.codec.binary.Base64;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.sulin.backend.config.IBackendProperties;
-import com.sulin.rest.client.QiwiAPIClient;
-import com.sulin.rest.response.QiwiResponseWrapper;
+import com.dip.backend.config.IBackendProperties;
+import com.dip.rest.client.QiwiAPIClient;
+import com.dip.rest.response.QiwiResponseWrapper;
 
 @Service("qiwiClient")
 public class QiwiClient extends QiwiApiClient implements QiwiAPIClient {

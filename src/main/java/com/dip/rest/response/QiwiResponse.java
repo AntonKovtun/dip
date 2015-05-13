@@ -1,6 +1,6 @@
-package com.sulin.rest.response;
+package com.dip.rest.response;
 
-import com.sulin.rest.response.bean.Bill;
+import com.dip.rest.response.bean.Bill;
 
 public class QiwiResponse {
     private String result_code;

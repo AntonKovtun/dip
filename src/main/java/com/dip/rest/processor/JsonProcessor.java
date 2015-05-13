@@ -1,9 +1,9 @@
-package com.sulin.rest.processor;
+package com.dip.rest.processor;
 
 import org.codehaus.jackson.map.ObjectMapper;
 
-import com.sulin.rest.constant.ContentType;
-import com.sulin.rest.response.RestResponse;
+import com.dip.rest.constant.ContentType;
+import com.dip.rest.response.RestResponse;
 
 class JsonProcessor extends AbstractProcessor {
 

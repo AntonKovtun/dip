@@ -1,6 +1,6 @@
-package com.sulin.frontend.web.model;
+package com.dip.frontend.web.model;
 
-import com.sulin.common.constant.Status;
+import com.dip.common.constant.Status;
 
 public class ReferenceBookModel extends AbstractDataModel {
     private static final long serialVersionUID = 1L;

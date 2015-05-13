@@ -4,7 +4,7 @@
 <html>
     <head>
          <%@include file="../include/header.jsp"%>
-        <title>Выход - sulin</title>
+        <title>Выход - dip</title>
         <script src="${applicationScope.resourceServerUrl}js/page/logout.js"></script>
     </head>
     

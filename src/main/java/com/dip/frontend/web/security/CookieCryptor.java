@@ -1,6 +1,6 @@
-package com.sulin.frontend.web.security;
+package com.dip.frontend.web.security;
 
-import com.sulin.common.constant.SulinConstants;
+import com.dip.common.constant.DipConstants;
 import org.apache.commons.codec.binary.Base64;
 import org.apache.log4j.Logger;
 import org.bouncycastle.crypto.BufferedBlockCipher;
@@ -28,7 +28,7 @@ public class CookieCryptor {
 	private void init() {
 		if(!initialized) {
 			try {
-				key =  "SulinCookieSecurityEncryptKey#32".getBytes(); //keyManagementServiceClient.getCookieKey();
+				key =  "DipCookieSecurityEncryptKey#32".getBytes(); //keyManagementServiceClient.getCookieKey();
 				secureRandom = new SecureRandom();
 				initialized = true;
 			} catch (Exception e) {
@@ -56,7 +56,7 @@ public class CookieCryptor {
 		byte[] iv = new byte[cipher.getBlockSize()];
 		secureRandom.nextBytes(iv);
 		cipher.init(true, new ParametersWithIV(new KeyParameter(key), iv));
-		byte[] input = plainTextCookieValue.getBytes(SulinConstants.UTF_8);
+		byte[] input = plainTextCookieValue.getBytes(DipConstants.UTF_8);
 		byte[] out = new byte[cipher.getOutputSize(input.length) + iv.length];
 		System.arraycopy(iv, 0, out, 0, iv.length);
 		final int len = cipher.processBytes(input, 0, input.length, out, iv.length);

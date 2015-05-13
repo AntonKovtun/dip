@@ -1,4 +1,4 @@
-package com.sulin.rest.transport;
+package com.dip.rest.transport;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -31,7 +31,7 @@ import org.apache.http.impl.client.BasicResponseHandler;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.protocol.HttpContext;
 
-import com.sulin.rest.constant.ContentType;
+import com.dip.rest.constant.ContentType;
 
 public abstract class HttpRequestWrapper {
     private final UrlWrapper url;

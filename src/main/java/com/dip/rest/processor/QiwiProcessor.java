@@ -1,4 +1,4 @@
-package com.sulin.rest.processor;
+package com.dip.rest.processor;
 
 
 public class QiwiProcessor extends JsonProcessor {

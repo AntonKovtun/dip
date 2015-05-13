@@ -19,7 +19,7 @@
  			<label for="userTypeDlg" class="col-sm-3 control-label">Тип пользователя</label>
 				<div class="col-sm-8">
 					<select id ="userTypeDlg" class="changeUserType selectpicker" name = "userTypeSelect">
-                        <c:if test="${sulin:hasRole(pageContext.request, 'SuperAdmin')}" >
+                        <c:if test="${dip:hasRole(pageContext.request, 'SuperAdmin')}" >
                             <option value="SuperAdmin">Администратор</option>
                             <option value="RegistrarAccounts">Регистратор аккаунтов</option>
                             <option value="Onlooker">Наблюдатель</option>
@@ -32,7 +32,7 @@
                             <option value="Other">Другой</option>
                         </c:if>
 
-                        <c:if test="${sulin:hasRole(pageContext.request, 'RegistrarAccounts')}" >
+                        <c:if test="${dip:hasRole(pageContext.request, 'RegistrarAccounts')}" >
                             <option value="RegistrarAccounts">Регистратор аккаунтов</option>
                             <option value="Onlooker">Наблюдатель</option>
                             <option value="ResponsibleForPayment">Ответственный за оплату</option>
@@ -44,7 +44,7 @@
                             <option value="Other">Другой</option>
                         </c:if>
 
-                        <c:if test="${sulin:hasRole(pageContext.request, 'SchoolAdmin')}" >
+                        <c:if test="${dip:hasRole(pageContext.request, 'SchoolAdmin')}" >
                             <option value="ResponsibleForPayment">Ответственный за оплату</option>
                             <option value="SchoolAdmin">Школьный администратор</option>
                             <option value="OperatorMarks">Наборщик оценок</option>
@@ -97,8 +97,8 @@
             <div class="col-sm-8" id = "or">
                 <select id="organizationNameDlg" class="changeOrganization selectpicker">
                     <c:if test="${! empty requestScope.listOrg}">
-                        <c:if test="${sulin:hasRole(pageContext.request, 'SuperAdmin')
-                                        or sulin:hasRole(pageContext.request, 'RegistrarAccounts')}" >
+                        <c:if test="${dip:hasRole(pageContext.request, 'SuperAdmin')
+                                        or dip:hasRole(pageContext.request, 'RegistrarAccounts')}" >
                             <c:forEach var="item" items="${requestScope.listOrg}">
                                 <c:choose>
                                     <c:when test="${cookie.organizationId.value == item.key}">
@@ -110,8 +110,8 @@
                                 </c:choose>
                             </c:forEach>
                         </c:if>
-                        <c:if test="${!(sulin:hasRole(pageContext.request, 'SuperAdmin')
-                                        or sulin:hasRole(pageContext.request, 'RegistrarAccounts'))}" >
+                        <c:if test="${!(dip:hasRole(pageContext.request, 'SuperAdmin')
+                                        or dip:hasRole(pageContext.request, 'RegistrarAccounts'))}" >
                             <%--<c:choose>--%>
                                 <c:if test="${cookie.organizationId.value != null && cookie.organizationId.value != 'disabled'}">
                                     <c:forEach var="item" items="${requestScope.listOrg}">

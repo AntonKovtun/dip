@@ -1,4 +1,4 @@
-package com.sulin.frontend.web.util;
+package com.dip.frontend.web.util;
 
 import org.apache.commons.lang.StringUtils;
 import org.codehaus.jackson.JsonParser;

@@ -1,4 +1,4 @@
-package com.sulin.frontend.web.model;
+package com.dip.frontend.web.model;
 
 import java.io.Serializable;
 

@@ -1,4 +1,4 @@
-package com.sulin.frontend.web.interceptor;
+package com.dip.frontend.web.interceptor;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

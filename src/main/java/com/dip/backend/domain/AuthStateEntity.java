@@ -1,4 +1,4 @@
-package com.sulin.backend.domain;
+package com.dip.backend.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -7,9 +7,7 @@ import javax.persistence.Table;
 import java.math.BigDecimal;
 import java.util.Date;
 
-/**
- * Used to track the authentication state of a user.
- */
+
 @Entity
 @Table(name = "AUTH_STATE")
 public class AuthStateEntity implements java.io.Serializable {

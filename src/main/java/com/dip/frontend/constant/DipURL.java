@@ -1,9 +1,6 @@
-package com.sulin.frontend.constant;
+package com.dip.frontend.constant;
 
-/**
- * Created by: Alexander Duckardt Date: 8/2/14.
- */
-public class SulinURL {
+public class DipURL {
 
     public static final String COUNTRY_LIST = "reference/countries";
     public static final String COUNTRY = "country";

@@ -1,4 +1,4 @@
-package com.sulin.sms24x7;
+package com.dip.sms24x7;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;

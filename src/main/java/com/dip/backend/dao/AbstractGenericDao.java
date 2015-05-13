@@ -1,4 +1,4 @@
-package com.sulin.backend.dao;
+package com.dip.backend.dao;
 
 import static org.hibernate.criterion.Projections.rowCount;
 import static org.hibernate.criterion.Restrictions.eq;
@@ -27,14 +27,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.sulin.backend.domain.BaseEntity;
-import com.sulin.common.constant.OrderConstants;
-import com.sulin.common.searchbean.AbstractSearchBean;
+import com.dip.backend.domain.BaseEntity;
+import com.dip.common.constant.OrderConstants;
+import com.dip.common.searchbean.AbstractSearchBean;
 
-/**
- * Created with IntelliJ IDEA. User: alexander Date: 10/27/13 Time: 9:11 PM To
- * change this template use File | Settings | File Templates.
- */
 public abstract class AbstractGenericDao<Entity extends BaseEntity, PrimaryKey extends Serializable, Query extends AbstractSearchBean>
         implements IGenericDao<Entity, PrimaryKey, Query> {
     protected final Logger log = LoggerFactory.getLogger(this.getClass());

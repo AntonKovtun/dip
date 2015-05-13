@@ -1,4 +1,4 @@
-package com.sulin.frontend.web.util;
+package com.dip.frontend.web.util;
 
 public class Base64CryptUtil {
 

@@ -1,14 +1,14 @@
-package com.sulin.frontend.web.controller;
+package com.dip.frontend.web.controller;
 
-import com.sulin.backend.service.IAuthenticationService;
-import com.sulin.backend.service.IUserService;
-import com.sulin.common.constant.ErrorCodes;
-import com.sulin.common.dto.AuthenticationResponse;
-import com.sulin.common.dto.UserDto;
-import com.sulin.frontend.constant.SulinURL;
-import com.sulin.frontend.web.model.CommonResponse;
-import com.sulin.frontend.web.model.LoginModel;
-import com.sulin.frontend.web.security.SulinCookieProvider;
+import com.dip.backend.service.IAuthenticationService;
+import com.dip.backend.service.IUserService;
+import com.dip.common.constant.ErrorCodes;
+import com.dip.common.dto.AuthenticationResponse;
+import com.dip.common.dto.UserDto;
+import com.dip.frontend.constant.DipURL;
+import com.dip.frontend.web.model.CommonResponse;
+import com.dip.frontend.web.model.LoginModel;
+import com.dip.frontend.web.security.DipCookieProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -34,16 +34,16 @@ public class LoginController extends AbstractFrontendController {
     @Autowired
     private IAuthenticationService authenticationService;
     @Autowired
-    private SulinCookieProvider cookieProvider;
+    private DipCookieProvider cookieProvider;
 
 
-    @RequestMapping(value = SulinURL.LOGIN, method = RequestMethod.GET)
+    @RequestMapping(value = DipURL.LOGIN, method = RequestMethod.GET)
     public String userView(HttpServletRequest request, Model model) {
 
         return "login-page";
     }
 
-    @RequestMapping(value = SulinURL.LOGIN, method = RequestMethod.POST)
+    @RequestMapping(value = DipURL.LOGIN, method = RequestMethod.POST)
     public @ResponseBody
     CommonResponse<String> processLogin(HttpSession session, @RequestBody LoginModel loginModel,
             HttpServletRequest request, HttpServletResponse response) throws Exception {
@@ -69,7 +69,7 @@ public class LoginController extends AbstractFrontendController {
         return commonResponse;
     }
 
-    @RequestMapping(value = SulinURL.LOGOUT, method = RequestMethod.GET)
+    @RequestMapping(value = DipURL.LOGOUT, method = RequestMethod.GET)
     public String processLogout(HttpServletRequest request, HttpServletResponse response) {
 
         String userId = cookieProvider.getUserId(request);

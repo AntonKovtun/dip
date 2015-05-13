@@ -1,9 +1,6 @@
-package com.sulin.frontend.constant;
+package com.dip.frontend.constant;
 
-/**
- * @author Alexander Dukkardt
- * 
- */
+
 public enum CommonWebConstant {
     notifications,
     response,

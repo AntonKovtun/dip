@@ -1,13 +1,10 @@
-package com.sulin.frontend.web.model;
+package com.dip.frontend.web.model;
 
 import java.io.Serializable;
 
-import com.sulin.common.constant.ErrorCodes;
+import com.dip.common.constant.ErrorCodes;
 
-/**
- * @author Alexander Duckardt
- * 
- */
+
 public class CommonResponse<T> implements Serializable {
     private static final long serialVersionUID = 1L;
     private ErrorCodes errorCode = ErrorCodes.OK;

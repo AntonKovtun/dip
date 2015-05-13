@@ -1,4 +1,4 @@
-package com.sulin.common.service.task;
+package com.dip.common.service.task;
 
 
 import org.slf4j.Logger;
@@ -6,9 +6,6 @@ import org.slf4j.LoggerFactory;
 
 import java.util.EnumMap;
 
-/**
- * @author Alexander Dukkardt
- */
 public abstract class AbstractBaseBackgroundTask implements IBaseBackgroundTask {
     private EnumMap<? extends Enum<?>, Object> backgroundTaskArgs;
     protected Logger log = LoggerFactory.getLogger(this.getClass());

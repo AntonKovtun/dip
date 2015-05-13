@@ -1,12 +1,6 @@
-/**
- * 
- */
-package com.sulin.frontend.config;
+package com.dip.frontend.config;
 
-/**
- * @author Alexander Dukkardt
- * 
- */
+
 public interface IFrontendProperties {
 
     public String getServerUrl();

@@ -1,14 +1,14 @@
-package com.sulin.frontend.web.interceptor;
+package com.dip.frontend.web.interceptor;
 
-import com.sulin.backend.service.IUserService;
-import com.sulin.common.constant.UserType;
-import com.sulin.common.dto.UserDto;
-import com.sulin.common.exception.BasicServiceException;
-import com.sulin.common.searchbean.UserSearchBean;
-import com.sulin.frontend.config.IFrontendProperties;
-import com.sulin.frontend.web.model.SulinAuthCookie;
-import com.sulin.frontend.web.security.SulinCookieProvider;
-import com.sulin.frontend.web.security.SecurityUtils;
+import com.dip.backend.service.IUserService;
+import com.dip.common.constant.UserType;
+import com.dip.common.dto.UserDto;
+import com.dip.common.exception.BasicServiceException;
+import com.dip.common.searchbean.UserSearchBean;
+import com.dip.frontend.config.IFrontendProperties;
+import com.dip.frontend.web.model.DipAuthCookie;
+import com.dip.frontend.web.security.DipCookieProvider;
+import com.dip.frontend.web.security.SecurityUtils;
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,20 +17,13 @@ import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.util.ArrayList;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
 
-/**
- * Created by: Alexander Duckardt
- * Date: 7/28/14.
- */
+
 public class SecurityInterceptor  extends HandlerInterceptorAdapter {
     protected Logger log = LoggerFactory.getLogger(this.getClass());
 
     @Autowired
-    private SulinCookieProvider cookieProvider;
+    private DipCookieProvider cookieProvider;
     @Autowired
     private IFrontendProperties frontendProperties;
 
@@ -44,7 +37,7 @@ public class SecurityInterceptor  extends HandlerInterceptorAdapter {
         log.info("================ Security interceptor Handler =======================");
         final String userId = cookieProvider.getUserId(request);
         final String roleId = cookieProvider.getUserRole(request);
-        final SulinAuthCookie newCookie = cookieProvider.renew(request, response);
+        final DipAuthCookie newCookie = cookieProvider.renew(request, response);
         if (!SecurityUtils.isURLOpen(request)){
             if(cookieProvider.cookieRenewFailedForThisRequest(request)) {
                 cookieProvider.invalidate(request, response);

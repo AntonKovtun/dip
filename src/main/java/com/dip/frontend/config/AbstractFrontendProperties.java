@@ -1,12 +1,8 @@
-package com.sulin.frontend.config;
+package com.dip.frontend.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 
-/**
- * @author Alexander Dukkardt
- * 
- */
 public abstract class AbstractFrontendProperties implements IFrontendProperties {
     @Autowired
     private Environment env;
@@ -34,12 +30,12 @@ public abstract class AbstractFrontendProperties implements IFrontendProperties 
 
     @Override
     public String getCookieDomain() {
-        return env.getProperty("sulin.auth.cookie.domain");
+        return env.getProperty("dip.auth.cookie.domain");
     }
 
     @Override
     public boolean expireOnBroserClose() {
-        return env.getProperty("sulin.auth.cookie.expire.on.browser.close", Boolean.class, true);
+        return env.getProperty("dip.auth.cookie.expire.on.browser.close", Boolean.class, true);
     }
 
 

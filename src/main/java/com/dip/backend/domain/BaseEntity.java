@@ -1,4 +1,4 @@
-package com.sulin.backend.domain;
+package com.dip.backend.domain;
 
 import org.hibernate.annotations.GenericGenerator;
 

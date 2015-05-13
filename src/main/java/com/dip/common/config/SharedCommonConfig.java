@@ -1,4 +1,4 @@
-package com.sulin.common.config;
+package com.dip.common.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -9,7 +9,7 @@ import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 import java.util.concurrent.ThreadPoolExecutor;
 
 @Configuration
-@ComponentScan(basePackages = "com.sulin.common")
+@ComponentScan(basePackages = "com.dip.common")
 public class SharedCommonConfig {
 
 	@Bean

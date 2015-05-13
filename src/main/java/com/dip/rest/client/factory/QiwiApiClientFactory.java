@@ -1,11 +1,11 @@
-package com.sulin.rest.client.factory;
+package com.dip.rest.client.factory;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
-import com.sulin.rest.client.QiwiAPIClient;
-import com.sulin.rest.constant.ClientProvider;
+import com.dip.rest.client.QiwiAPIClient;
+import com.dip.rest.constant.ClientProvider;
 
 @Service
 public class QiwiApiClientFactory extends AbstractAPIClientFactory<QiwiAPIClient> {

@@ -1,7 +1,7 @@
-package com.sulin.frontend.web.security;
+package com.dip.frontend.web.security;
 
-import com.sulin.common.constant.UserType;
-import com.sulin.frontend.config.IFrontendProperties;
+import com.dip.common.constant.UserType;
+import com.dip.frontend.config.IFrontendProperties;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
@@ -9,10 +9,7 @@ import org.springframework.web.context.support.WebApplicationContextUtils;
 
 import javax.servlet.http.HttpServletRequest;
 
-/**
- * Created by: Alexander Duckardt
- * Date: 8/15/14.
- */
+
 public class SecurityUtils {
     protected static final Logger log = LoggerFactory.getLogger(SecurityUtils.class);
 
@@ -50,7 +47,7 @@ public class SecurityUtils {
             return true;
 
 
-        for(Privilege privilege: SulinPermissions.userPermissions[userRole.ordinal()].getPrivileges()){
+        for(Privilege privilege: DipPermissions.userPermissions[userRole.ordinal()].getPrivileges()){
             if(privilege.getURL().equals(formattedURL)){
                 if("GET".equals(request.getMethod())
                    || privilege.isCanWrite())

@@ -1,16 +1,12 @@
-package com.sulin.backend.domain;
+package com.dip.backend.domain;
 
 import javax.persistence.Column;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.MappedSuperclass;
 
-import com.sulin.common.constant.Status;
+import com.dip.common.constant.Status;
 
-/**
- * @author anton
- * 
- */
 @MappedSuperclass
 public abstract class BaseReferenceBookEntity extends BaseEntity {
     private static final long serialVersionUID = 1L;

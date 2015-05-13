@@ -1,4 +1,4 @@
-package com.sulin.sms24x7;
+package com.dip.sms24x7;
 
 import java.io.IOException;
 

@@ -1,13 +1,10 @@
-package com.sulin.frontend.config;
+package com.dip.frontend.config;
 
-import com.sulin.common.annotation.Dev;
+import com.dip.common.annotation.Dev;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 
-/**
- * @author Alexander Dukkardt
- *
- */
+
 @Configuration
 @Dev
 @PropertySource("classpath:frontend-dev.properties")

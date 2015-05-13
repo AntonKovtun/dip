@@ -1,11 +1,11 @@
-package com.sulin.frontend.web.security;
+package com.dip.frontend.web.security;
 
-import com.sulin.backend.service.IAuthenticationService;
-import com.sulin.common.dto.AuthToken;
-import com.sulin.common.dto.AuthenticationResponse;
-import com.sulin.frontend.config.IFrontendProperties;
-import com.sulin.frontend.web.model.SulinAuthCookie;
-import com.sulin.frontend.web.util.CookieUtils;
+import com.dip.backend.service.IAuthenticationService;
+import com.dip.common.dto.AuthToken;
+import com.dip.common.dto.AuthenticationResponse;
+import com.dip.frontend.config.IFrontendProperties;
+import com.dip.frontend.web.model.DipAuthCookie;
+import com.dip.frontend.web.util.CookieUtils;
 import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,9 +17,9 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.Date;
 
 @Component
-public class SulinCookieProvider {
+public class DipCookieProvider {
 
-    private static Logger LOG = Logger.getLogger(SulinCookieProvider.class);
+    private static Logger LOG = Logger.getLogger(DipCookieProvider.class);
 
     @Autowired
     private CookieCryptor cookieCryptor;
@@ -29,7 +29,7 @@ public class SulinCookieProvider {
     @Autowired
     private IAuthenticationService authenticationService;
 
-    private static final String COOKIE_NAME = "SULIN_AUTH_TOKEN";
+    private static final String COOKIE_NAME = "DIP_AUTH_TOKEN";
     private static final String COOKIE_RENEWED_ATTR = "AUTH_COOKIE_RENEWED";
     private static final String COOKIE_RENEW_FAILED = "AUTH_COOKIE_RENEW_FAILED";
 
@@ -52,9 +52,9 @@ public class SulinCookieProvider {
      * @return - the new OpenIAMAuthCookie, representing the identity of the
      *         User
      */
-    public SulinAuthCookie renew(final HttpServletRequest request, final HttpServletResponse response) {
-        SulinAuthCookie retVal = null;
-        final SulinAuthCookie oldCookie = decrypt(request);
+    public DipAuthCookie renew(final HttpServletRequest request, final HttpServletResponse response) {
+        DipAuthCookie retVal = null;
+        final DipAuthCookie oldCookie = decrypt(request);
         String user_Id = this.getUserId(request);
 //        if (!ProxyFilter.isProxyRequest(request)) {
 //            LOG.debug("is not a proxy request - renewing cookie");
@@ -74,7 +74,7 @@ public class SulinCookieProvider {
                         final String principal = authToken.getPrincipal();
                         try {
                             //retVal = new OpenIAMAuthCookie(userId, principal, token, tokenType, (includeTimestamp) ? ssoToken.getExpirationTime() : null);
-                            retVal = new SulinAuthCookie(userId, principal, token, userRole, authToken.getExpirationTime());
+                            retVal = new DipAuthCookie(userId, principal, token, userRole, authToken.getExpirationTime());
                             encryptAndAdd(request, response, retVal, authToken);
                             request.setAttribute(COOKIE_RENEWED_ATTR, retVal);
                         } catch (Throwable e) {
@@ -97,8 +97,8 @@ public class SulinCookieProvider {
         return Boolean.TRUE.equals(request.getAttribute(COOKIE_RENEW_FAILED));
     }
 
-    public SulinAuthCookie getTokenForCurrentRequest(final HttpServletRequest request) {
-        return (SulinAuthCookie) request.getAttribute(COOKIE_RENEWED_ATTR);
+    public DipAuthCookie getTokenForCurrentRequest(final HttpServletRequest request) {
+        return (DipAuthCookie) request.getAttribute(COOKIE_RENEWED_ATTR);
     }
 
     /**
@@ -128,7 +128,7 @@ public class SulinCookieProvider {
 
     public String getUserId(final HttpServletRequest request) {
         String userId = null;
-        final SulinAuthCookie token = decrypt(request);
+        final DipAuthCookie token = decrypt(request);
         if (token != null) {
             userId = token.getUserId();
         }
@@ -136,7 +136,7 @@ public class SulinCookieProvider {
     }
     public String getUserRole(final HttpServletRequest request) {
         String userRole = null;
-        final SulinAuthCookie token = decrypt(request);
+        final DipAuthCookie token = decrypt(request);
         if (token != null) {
             userRole = token.getUserRole();
         }
@@ -154,7 +154,7 @@ public class SulinCookieProvider {
 
     public String getPrincipal(final HttpServletRequest request) {
         String principal = null;
-        final SulinAuthCookie cookie = this.decrypt(request);
+        final DipAuthCookie cookie = this.decrypt(request);
         if (cookie != null) {
             principal = cookie.getPrincipal();
         }
@@ -167,14 +167,14 @@ public class SulinCookieProvider {
      *            - the current HttpServletRequest
      * @return - the current OpenIAMAuthCookie - does NOT renew the token
      */
-    private SulinAuthCookie decrypt(final HttpServletRequest request) {
-        SulinAuthCookie retVal = null;
+    private DipAuthCookie decrypt(final HttpServletRequest request) {
+        DipAuthCookie retVal = null;
         final Cookie cookie = CookieUtils.getCookie(request, COOKIE_NAME);
 
         if (cookie != null && cookie.getMaxAge() != 0) {
             try {
                 final String cookieValue = (cookieEncryptionEnabled) ? cookieCryptor.decode(cookie.getValue()) : cookie.getValue();
-                retVal = SulinAuthCookie.getToken(cookieValue);
+                retVal = DipAuthCookie.getToken(cookieValue);
             } catch (Throwable e) {
                 LOG.warn(String.format("Can't decrypt cookie", cookie.getValue()), e);
             }
@@ -188,11 +188,11 @@ public class SulinCookieProvider {
         final String userId = authResponse.getUserId();
 
         final AuthToken authToken = authResponse.getAuthToken();
-        final SulinAuthCookie token = new SulinAuthCookie(userId, principal, authToken.getToken(), authToken.getUserRole(), authToken.getExpirationTime());
+        final DipAuthCookie token = new DipAuthCookie(userId, principal, authToken.getToken(), authToken.getUserRole(), authToken.getExpirationTime());
         encryptAndAdd(request, response, token, authToken);
     }
 
-    private void encryptAndAdd(final HttpServletRequest request, final HttpServletResponse response, final SulinAuthCookie token,
+    private void encryptAndAdd(final HttpServletRequest request, final HttpServletResponse response, final DipAuthCookie token,
                                final AuthToken authToken) throws Exception {
         final int seconds = Long.valueOf((authToken.getExpirationTime().getTime() - new Date().getTime()) / 1000).intValue();
 

@@ -4,20 +4,20 @@
         version="2.1">
     <tlib-version>1.0</tlib-version>
     <short-name>iam</short-name>
-    <uri>http://sulin.ru/taglibs</uri>
+    <uri>http://dip.ru/taglibs</uri>
     <function>
         <name>hasAccess</name>
-        <function-class>com.sulin.frontend.web.util.CustomFunctions</function-class>
+        <function-class>com.dip.frontend.web.util.CustomFunctions</function-class>
         <function-signature>boolean hasAccess(javax.servlet.http.HttpServletRequest, java.lang.String)</function-signature>
     </function>
     <function>
         <name>hasRole</name>
-        <function-class>com.sulin.frontend.web.util.CustomFunctions</function-class>
+        <function-class>com.dip.frontend.web.util.CustomFunctions</function-class>
         <function-signature>boolean hasRole(javax.servlet.http.HttpServletRequest, java.lang.String)</function-signature>
     </function>
     <function>
         <name>isAuthenticated</name>
-        <function-class>com.sulin.frontend.web.util.CustomFunctions</function-class>
+        <function-class>com.dip.frontend.web.util.CustomFunctions</function-class>
         <function-signature>boolean isAuthenticated(javax.servlet.http.HttpServletRequest)</function-signature>
     </function>
 </taglib>

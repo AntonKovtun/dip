@@ -1,14 +1,10 @@
-package com.sulin.common.dto.response;
+package com.dip.common.dto.response;
 
-import com.sulin.common.constant.ErrorCodes;
-import com.sulin.common.constant.ResponseStatus;
+import com.dip.common.constant.ErrorCodes;
+import com.dip.common.constant.ResponseStatus;
 
 import java.io.Serializable;
 
-/**
- * Created by: Alexander Duckardt
- * Date: 8/3/14.
- */
 public class ServiceResponse implements Serializable {
 
     protected ResponseStatus status;

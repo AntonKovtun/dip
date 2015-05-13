@@ -1,9 +1,6 @@
-package com.sulin.backend.config;
+package com.dip.backend.config;
 
-/**
- * Created with IntelliJ IDEA. User: alexander Date: 10/27/13 Time: 7:04 PM To
- * change this template use File | Settings | File Templates.
- */
+
 public interface IBackendProperties {
     public String getJdbcDriverClassName();
 

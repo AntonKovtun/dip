@@ -1,11 +1,5 @@
-package com.sulin.common.service.task;
+package com.dip.common.service.task;
 
-
-
-/**
- * @author Alexander Dukkardt
- * 
- */
 public abstract class AbstractBaseRunnableBackgroundTask extends
         AbstractBaseBackgroundTask implements IBaseRunnableBackgroundTask {
 

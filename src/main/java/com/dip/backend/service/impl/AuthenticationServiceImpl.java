@@ -1,19 +1,19 @@
-package com.sulin.backend.service.impl;
+package com.dip.backend.service.impl;
 
-import com.sulin.backend.config.IBackendProperties;
-import com.sulin.backend.dao.IAuthStateDao;
-import com.sulin.backend.dao.IUserDao;
-import com.sulin.backend.domain.AuthStateEntity;
-import com.sulin.backend.domain.UserEntity;
-import com.sulin.backend.service.IAuthenticationService;
-import com.sulin.backend.service.module.IAuthTokenModule;
-import com.sulin.common.constant.ErrorCodes;
-import com.sulin.common.constant.ResponseStatus;
-import com.sulin.common.constant.Status;
-import com.sulin.common.dto.AuthToken;
-import com.sulin.common.dto.AuthenticationResponse;
-import com.sulin.common.exception.BasicServiceException;
-import com.sulin.common.searchbean.UserSearchBean;
+import com.dip.backend.config.IBackendProperties;
+import com.dip.backend.dao.IAuthStateDao;
+import com.dip.backend.dao.IUserDao;
+import com.dip.backend.domain.AuthStateEntity;
+import com.dip.backend.domain.UserEntity;
+import com.dip.backend.service.IAuthenticationService;
+import com.dip.backend.service.module.IAuthTokenModule;
+import com.dip.common.constant.ErrorCodes;
+import com.dip.common.constant.ResponseStatus;
+import com.dip.common.constant.Status;
+import com.dip.common.dto.AuthToken;
+import com.dip.common.dto.AuthenticationResponse;
+import com.dip.common.exception.BasicServiceException;
+import com.dip.common.searchbean.UserSearchBean;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
@@ -28,10 +28,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * Created by: Alexander Duckardt
- * Date: 8/3/14.
- */
 @Service("authenticate")
 @Transactional
 public class AuthenticationServiceImpl implements IAuthenticationService {

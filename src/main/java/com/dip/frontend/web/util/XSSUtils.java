@@ -1,4 +1,4 @@
-package com.sulin.frontend.web.util;
+package com.dip.frontend.web.util;
 
 import java.text.Normalizer;
 import java.util.regex.Pattern;

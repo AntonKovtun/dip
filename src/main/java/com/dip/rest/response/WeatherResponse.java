@@ -1,14 +1,14 @@
-package com.sulin.rest.response;
+package com.dip.rest.response;
 
 import java.util.List;
 
-import com.sulin.rest.response.bean.Clouds;
-import com.sulin.rest.response.bean.Coord;
-import com.sulin.rest.response.bean.Main;
-import com.sulin.rest.response.bean.Rain;
-import com.sulin.rest.response.bean.Sys;
-import com.sulin.rest.response.bean.WeatherData;
-import com.sulin.rest.response.bean.Wind;
+import com.dip.rest.response.bean.Clouds;
+import com.dip.rest.response.bean.Coord;
+import com.dip.rest.response.bean.Main;
+import com.dip.rest.response.bean.Rain;
+import com.dip.rest.response.bean.Sys;
+import com.dip.rest.response.bean.WeatherData;
+import com.dip.rest.response.bean.Wind;
 
 public class WeatherResponse extends RestResponse {
     private Coord coord;

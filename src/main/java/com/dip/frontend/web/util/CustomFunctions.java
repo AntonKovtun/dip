@@ -1,9 +1,9 @@
-package com.sulin.frontend.web.util;
+package com.dip.frontend.web.util;
 
-import com.sulin.common.constant.UserType;
-import com.sulin.frontend.config.IFrontendProperties;
-import com.sulin.frontend.web.security.SulinCookieProvider;
-import com.sulin.frontend.web.security.SecurityUtils;
+import com.dip.common.constant.UserType;
+import com.dip.frontend.config.IFrontendProperties;
+import com.dip.frontend.web.security.DipCookieProvider;
+import com.dip.frontend.web.security.SecurityUtils;
 import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
 import org.springframework.context.ApplicationContext;
@@ -18,7 +18,7 @@ import javax.servlet.http.HttpServletRequest;
 public class CustomFunctions {
     private static final Logger LOG = Logger.getLogger(CustomFunctions.class);
 
-    private static SulinCookieProvider cookieProvider;
+    private static DipCookieProvider cookieProvider;
     private static IFrontendProperties frontendProperties;
     private static boolean isInitialized=false;
 
@@ -70,7 +70,7 @@ public class CustomFunctions {
         ApplicationContext ctx = WebApplicationContextUtils.getWebApplicationContext(
                 request.getServletContext());
         frontendProperties = ctx.getBean(IFrontendProperties.class);
-        cookieProvider = ctx.getBean(SulinCookieProvider.class);
+        cookieProvider = ctx.getBean(DipCookieProvider.class);
         isInitialized=true;
     }
 }

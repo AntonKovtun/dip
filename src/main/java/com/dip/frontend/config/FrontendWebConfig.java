@@ -1,9 +1,9 @@
-package com.sulin.frontend.config;
+package com.dip.frontend.config;
 
-import com.sulin.frontend.web.converter.BaseLoggingStringHttpConverter;
-import com.sulin.frontend.web.interceptor.BaseLogInterceptor;
-import com.sulin.frontend.web.interceptor.SecurityInterceptor;
-import com.sulin.frontend.web.util.ExtendedResourceBundleMessageSource;
+import com.dip.frontend.web.converter.BaseLoggingStringHttpConverter;
+import com.dip.frontend.web.interceptor.BaseLogInterceptor;
+import com.dip.frontend.web.interceptor.SecurityInterceptor;
+import com.dip.frontend.web.util.ExtendedResourceBundleMessageSource;
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -20,14 +20,10 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 import java.util.List;
 
-/**
- * @author Alexander Duckardt
- *
- */
 @Configuration
 @EnableWebMvc
 @EnableAsync
-@ComponentScan(basePackages = {"com.sulin.frontend", "com.sulin.rest"})
+@ComponentScan(basePackages = {"com.dip.frontend", "com.dip.rest"})
 public class FrontendWebConfig extends WebMvcConfigurerAdapter {
 
     /*

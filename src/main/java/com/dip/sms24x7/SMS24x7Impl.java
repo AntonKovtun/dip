@@ -1,4 +1,4 @@
-package com.sulin.sms24x7;
+package com.dip.sms24x7;
 
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
@@ -9,7 +9,7 @@ import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 
-import static com.sulin.sms24x7.Util.encode;
+import static com.dip.sms24x7.Util.encode;
 
 /**
  * <p>

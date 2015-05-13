@@ -1,19 +1,12 @@
-package com.sulin.common.searchbean;
+package com.dip.common.searchbean;
 
 
-import com.sulin.common.constant.OrderConstants;
+import com.dip.common.constant.OrderConstants;
 import org.apache.commons.collections.CollectionUtils;
 
 import java.util.HashSet;
 import java.util.Set;
 
-/**
- * Created with IntelliJ IDEA.
- * User: alexander
- * Date: 10/27/13
- * Time: 9:56 PM
- * To change this template use File | Settings | File Templates.
- */
 public abstract class AbstractSearchBean<KeyType> implements SearchBean<KeyType>{
     private Set<KeyType> keySet;
     private OrderConstants orderBy = OrderConstants.ASC;

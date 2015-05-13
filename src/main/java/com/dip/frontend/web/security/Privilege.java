@@ -1,10 +1,8 @@
-package com.sulin.frontend.web.security;
+package com.dip.frontend.web.security;
 
-import com.sulin.frontend.constant.SulinURL;
+import com.dip.frontend.constant.DipURL;
 
-/**
- * Created by: Alexander Duckardt Date: 8/2/14.
- */
+
 public class Privilege implements Cloneable {
     private String URL;
     private boolean isOpen = false;
@@ -28,28 +26,28 @@ public class Privilege implements Cloneable {
         return new Privilege(URL, true, false);
     }
 
-    public static final Privilege COUNTRY_LIST = Privilege.getReadOnlyPrivilege(SulinURL.COUNTRY_LIST);
-    public static final Privilege COUNTRY_VIEW = Privilege.getReadOnlyPrivilege(SulinURL.COUNTRY);
-    public static final Privilege COUNTRY_EDIT = Privilege.getFullPrivilege(SulinURL.COUNTRY);
+    public static final Privilege COUNTRY_LIST = Privilege.getReadOnlyPrivilege(DipURL.COUNTRY_LIST);
+    public static final Privilege COUNTRY_VIEW = Privilege.getReadOnlyPrivilege(DipURL.COUNTRY);
+    public static final Privilege COUNTRY_EDIT = Privilege.getFullPrivilege(DipURL.COUNTRY);
 
-    public static final Privilege USER_LIST = Privilege.getReadOnlyPrivilege(SulinURL.USER_LIST);
-    public static final Privilege USER_VIEW = Privilege.getReadOnlyPrivilege(SulinURL.USER);
-    public static final Privilege USER_EDIT = Privilege.getFullPrivilege(SulinURL.USER);
-    public static final Privilege USER_SEARCH = Privilege.getFullPrivilege(SulinURL.USER_SEARCH);
-    public static final Privilege USER_PASSWORD = Privilege.getFullPrivilege(SulinURL.USER_PASSWORD);
+    public static final Privilege USER_LIST = Privilege.getReadOnlyPrivilege(DipURL.USER_LIST);
+    public static final Privilege USER_VIEW = Privilege.getReadOnlyPrivilege(DipURL.USER);
+    public static final Privilege USER_EDIT = Privilege.getFullPrivilege(DipURL.USER);
+    public static final Privilege USER_SEARCH = Privilege.getFullPrivilege(DipURL.USER_SEARCH);
+    public static final Privilege USER_PASSWORD = Privilege.getFullPrivilege(DipURL.USER_PASSWORD);
     // TODO: REFACTOR - NEED TO MAKE AJAX CALL FOR SEARCH INSREAD OF SEPARATE
 
-    public static final Privilege LOGIN = Privilege.getPublicPrivilege(SulinURL.LOGIN);
-    public static final Privilege LOGOUT = Privilege.getPublicPrivilege(SulinURL.LOGOUT);
-    public static final Privilege TERMS_LIST = Privilege.getPublicPrivilege(SulinURL.TERMS_LIST);
-    public static final Privilege INSTRUCTIONS_LIST = Privilege.getPublicPrivilege(SulinURL.INSTRUCTIONS_LIST);
-    public static final Privilege CONTACTS = Privilege.getPublicPrivilege(SulinURL.CONTACTS);
-    public static final Privilege SERVICES_AMOUNT = Privilege.getPublicPrivilege(SulinURL.SERVICES_AMOUNT);
+    public static final Privilege LOGIN = Privilege.getPublicPrivilege(DipURL.LOGIN);
+    public static final Privilege LOGOUT = Privilege.getPublicPrivilege(DipURL.LOGOUT);
+    public static final Privilege TERMS_LIST = Privilege.getPublicPrivilege(DipURL.TERMS_LIST);
+    public static final Privilege INSTRUCTIONS_LIST = Privilege.getPublicPrivilege(DipURL.INSTRUCTIONS_LIST);
+    public static final Privilege CONTACTS = Privilege.getPublicPrivilege(DipURL.CONTACTS);
+    public static final Privilege SERVICES_AMOUNT = Privilege.getPublicPrivilege(DipURL.SERVICES_AMOUNT);
 
-    public static final Privilege START = Privilege.getReadOnlyPrivilege(SulinURL.START);
-    public static final Privilege INDEX = Privilege.getReadOnlyPrivilege(SulinURL.INDEX);
+    public static final Privilege START = Privilege.getReadOnlyPrivilege(DipURL.START);
+    public static final Privilege INDEX = Privilege.getReadOnlyPrivilege(DipURL.INDEX);
 
-    public static final Privilege MARKS_SEARCH = Privilege.getReadOnlyPrivilege(SulinURL.MARKS_SEARCH);
+    public static final Privilege MARKS_SEARCH = Privilege.getReadOnlyPrivilege(DipURL.MARKS_SEARCH);
 
     public String getURL() {
         return URL;

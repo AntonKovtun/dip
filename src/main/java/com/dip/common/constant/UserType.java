@@ -1,4 +1,4 @@
-package com.sulin.common.constant;
+package com.dip.common.constant;
 
 public enum UserType {
     SuperAdmin,

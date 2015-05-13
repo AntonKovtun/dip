@@ -1,12 +1,8 @@
-package com.sulin.common.exception;
+package com.dip.common.exception;
 
 
-import com.sulin.common.constant.ErrorCodes;
+import com.dip.common.constant.ErrorCodes;
 
-/**
- * @author Duckardt
- *
- */
 public class BasicServiceException extends Exception {
     private static final long serialVersionUID = 1L;
     private ErrorCodes errorCode;

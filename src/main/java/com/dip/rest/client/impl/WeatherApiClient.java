@@ -1,6 +1,6 @@
-package com.sulin.rest.client.impl;
+package com.dip.rest.client.impl;
 
-import com.sulin.rest.client.AbstractAPIClient;
+import com.dip.rest.client.AbstractAPIClient;
 
 public abstract class WeatherApiClient extends AbstractAPIClient {
     private String baseUrl = "http://api.openweathermap.org";

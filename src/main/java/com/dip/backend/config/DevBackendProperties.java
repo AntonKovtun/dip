@@ -1,14 +1,10 @@
-package com.sulin.backend.config;
+package com.dip.backend.config;
 
-import com.sulin.common.annotation.Dev;
+import com.dip.common.annotation.Dev;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.annotation.PropertySources;
 
-/**
- * @author Alexander Dukkardt
- *
- */
 @Configuration
 @Dev
 @PropertySources(value={@PropertySource("classpath:backend-dev.properties")})

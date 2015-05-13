@@ -1,22 +1,22 @@
-package com.sulin.frontend.web.security;
+package com.dip.frontend.web.security;
 
-import com.sulin.common.constant.UserType;
+import com.dip.common.constant.UserType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.HashSet;
 import java.util.Set;
 
-public class SulinPermissions implements Cloneable {
-    private final static Logger log = LoggerFactory.getLogger(SulinPermissions.class);
-    public static SulinPermissions[] userPermissions;
+public class DipPermissions implements Cloneable {
+    private final static Logger log = LoggerFactory.getLogger(DipPermissions.class);
+    public static DipPermissions[] userPermissions;
 
     private Set<Privilege> privileges;
 
     static {
-        userPermissions = new SulinPermissions[UserType.values().length];
+        userPermissions = new DipPermissions[UserType.values().length];
         for(UserType role: UserType.values()){
-            userPermissions[role.ordinal()] = new SulinPermissions();
+            userPermissions[role.ordinal()] = new DipPermissions();
             userPermissions[role.ordinal()].privileges = new HashSet<Privilege>();
 
             switch (role){
@@ -57,7 +57,7 @@ public class SulinPermissions implements Cloneable {
     public Set<Privilege> getPrivileges() {
         return privileges;
     }
-    public SulinPermissions addPrivileges(Privilege privilege) {
+    public DipPermissions addPrivileges(Privilege privilege) {
         if (this.privileges == null)
             this.privileges = new HashSet<Privilege>();
         this.privileges.add(privilege);

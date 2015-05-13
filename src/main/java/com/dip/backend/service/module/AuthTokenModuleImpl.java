@@ -1,8 +1,8 @@
-package com.sulin.backend.service.module;
+package com.dip.backend.service.module;
 
-import com.sulin.backend.config.IBackendProperties;
-import com.sulin.common.constant.UserType;
-import com.sulin.common.dto.AuthToken;
+import com.dip.backend.config.IBackendProperties;
+import com.dip.common.constant.UserType;
+import com.dip.common.dto.AuthToken;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,10 +12,7 @@ import java.util.Date;
 import java.util.Map;
 import java.util.StringTokenizer;
 
-/**
- * Created by: Alexander Duckardt
- * Date: 8/3/14.
- */
+
 @Component("authTokenModule")
 public class AuthTokenModuleImpl implements IAuthTokenModule {
     protected final Logger log = LoggerFactory.getLogger(this.getClass());

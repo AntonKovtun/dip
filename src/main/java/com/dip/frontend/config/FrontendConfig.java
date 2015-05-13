@@ -1,19 +1,16 @@
 /**
  * 
  */
-package com.sulin.frontend.config;
+package com.dip.frontend.config;
 
-import com.sulin.frontend.web.util.CustomJacksonMapper;
+import com.dip.frontend.web.util.CustomJacksonMapper;
 import org.codehaus.jackson.JsonGenerator.Feature;
 import org.codehaus.jackson.map.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-/**
- * @author Alexander Dukkardt
- * 
- */
+
 @Configuration
 public class FrontendConfig {
 

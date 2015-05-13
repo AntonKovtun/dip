@@ -1,4 +1,4 @@
-package com.sulin.common.service.task;
+package com.dip.common.service.task;
 
 
 import org.slf4j.Logger;
@@ -8,10 +8,6 @@ import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 
 import java.util.EnumMap;
 
-/**
- * @author Sergei Barinov
- * 
- */
 public abstract class AbstractBaseBackgroundTaskService {
 
     protected Logger log = LoggerFactory.getLogger(getClass());

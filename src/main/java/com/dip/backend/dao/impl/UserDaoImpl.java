@@ -1,10 +1,10 @@
-package com.sulin.backend.dao.impl;
+package com.dip.backend.dao.impl;
 
-import com.sulin.backend.dao.AbstractGenericDao;
-import com.sulin.backend.dao.IUserDao;
-import com.sulin.backend.domain.UserEntity;
-import com.sulin.common.constant.Status;
-import com.sulin.common.searchbean.UserSearchBean;
+import com.dip.backend.dao.AbstractGenericDao;
+import com.dip.backend.dao.IUserDao;
+import com.dip.backend.domain.UserEntity;
+import com.dip.common.constant.Status;
+import com.dip.common.searchbean.UserSearchBean;
 import org.apache.commons.lang.StringUtils;
 import org.hibernate.Criteria;
 import org.hibernate.criterion.MatchMode;
@@ -13,9 +13,6 @@ import org.hibernate.criterion.Restrictions;
 import org.hibernate.sql.JoinType;
 import org.springframework.stereotype.Repository;
 
-/**
- * Created by: andrew
- */
 @Repository("userDao")
 public class UserDaoImpl extends AbstractGenericDao<UserEntity, String, UserSearchBean> implements IUserDao {
 

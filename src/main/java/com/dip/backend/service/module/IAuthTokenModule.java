@@ -1,13 +1,10 @@
-package com.sulin.backend.service.module;
+package com.dip.backend.service.module;
 
-import com.sulin.common.dto.AuthToken;
+import com.dip.common.dto.AuthToken;
 
 import java.util.Map;
 
-/**
- * Created by: Alexander Duckardt
- * Date: 8/3/14.
- */
+
 public interface IAuthTokenModule {
     AuthToken createToken(Map tokenParam) throws Exception;
     /**

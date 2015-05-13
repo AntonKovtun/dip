@@ -1,11 +1,7 @@
-package com.sulin.backend.dao;
+package com.dip.backend.dao;
 
-import com.sulin.backend.domain.AuthStateEntity;
+import com.dip.backend.domain.AuthStateEntity;
 
-/**
- * Created by: Alexander Duckardt
- * Date: 8/3/14.
- */
 public interface IAuthStateDao {
     public AuthStateEntity findById(String id);
     public void saveAuthState(final AuthStateEntity authState);

@@ -1,12 +1,8 @@
-package com.sulin.common.service.task;
+package com.dip.common.service.task;
 
 
 import java.util.EnumMap;
 
-/**
- * @author Alexander Dukkardt
- * 
- */
 public interface IBaseBackgroundTask extends Cloneable {
 
     /**

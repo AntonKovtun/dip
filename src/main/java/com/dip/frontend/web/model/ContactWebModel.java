@@ -1,4 +1,4 @@
-package com.sulin.frontend.web.model;
+package com.dip.frontend.web.model;
 
 
 public class ContactWebModel {

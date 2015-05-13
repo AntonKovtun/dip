@@ -1,6 +1,6 @@
-package com.sulin.rest.client;
+package com.dip.rest.client;
 
-import com.sulin.rest.response.QiwiResponseWrapper;
+import com.dip.rest.response.QiwiResponseWrapper;
 
 public interface QiwiAPIClient extends RestAPIClient {
     public QiwiResponseWrapper bill(String storeId, String userPhoneNumber, Double amount, String ccy, String comment,

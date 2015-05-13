@@ -1,17 +1,14 @@
-package com.sulin.backend.service;
+package com.dip.backend.service;
 
 import java.util.List;
 
-import com.sulin.backend.dao.IUserDao;
-import com.sulin.backend.domain.UserEntity;
-import com.sulin.common.dto.UserDto;
-import com.sulin.common.exception.BasicServiceException;
-import com.sulin.common.searchbean.UserSearchBean;
-import com.sulin.frontend.web.model.UserWebModel;
+import com.dip.backend.dao.IUserDao;
+import com.dip.backend.domain.UserEntity;
+import com.dip.common.dto.UserDto;
+import com.dip.common.exception.BasicServiceException;
+import com.dip.common.searchbean.UserSearchBean;
+import com.dip.frontend.web.model.UserWebModel;
 
-/**
- * Created by: andrew
- */
 public interface IUserService {
     List<UserDto> search(UserSearchBean searchBean) throws BasicServiceException;
 //    List<UserDto> searchSome(UserSearchBean searchBean) throws BasicServiceException;

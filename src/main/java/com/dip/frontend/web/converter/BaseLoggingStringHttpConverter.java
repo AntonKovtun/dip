@@ -1,4 +1,4 @@
-package com.sulin.frontend.web.converter;
+package com.dip.frontend.web.converter;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
