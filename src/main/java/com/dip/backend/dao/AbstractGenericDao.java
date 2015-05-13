@@ -31,6 +31,10 @@ import com.dip.backend.domain.BaseEntity;
 import com.dip.common.constant.OrderConstants;
 import com.dip.common.searchbean.AbstractSearchBean;
 
+/**
+ * Created with IntelliJ IDEA. User: alexander Date: 10/27/13 Time: 9:11 PM To
+ * change this template use File | Settings | File Templates.
+ */
 public abstract class AbstractGenericDao<Entity extends BaseEntity, PrimaryKey extends Serializable, Query extends AbstractSearchBean>
         implements IGenericDao<Entity, PrimaryKey, Query> {
     protected final Logger log = LoggerFactory.getLogger(this.getClass());
@@ -160,7 +164,7 @@ public abstract class AbstractGenericDao<Entity extends BaseEntity, PrimaryKey e
             return null;
         }
         return (Entity) getCriteria().add(eq(getPKfieldName(), id)).uniqueResult(); // this.getSession().get(domainClass,
-                                                                                    // id);
+        // id);
     }
 
     /**
@@ -170,7 +174,7 @@ public abstract class AbstractGenericDao<Entity extends BaseEntity, PrimaryKey e
      * fixed that, was by calling this method, which calles Session.get.
      * According to the Hibernate docs, 'get' never returns a non-initialized
      * object. Consider removing this in 3.2
-     * 
+     *
      * @param id
      * @return
      */
