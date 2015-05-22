@@ -16,3 +16,8 @@ CREATE TABLE USERS (
 ) WITH (OIDS=FALSE);
 
 insert into USERS(USER_ID, NAME, DESCRIPTION, EMAIL, LOGIN, PASSWORD, PHONE, USER_TYPE, STATUS) values('1', 'Admin', 'description', 'info@my3o.ru', 'info@my3o.ru', 'geirby', '+79072348756', 'SuperAdmin', 'Active');
+
+
+
+
+
