@@ -49,6 +49,8 @@ public class Privilege implements Cloneable {
 
     public static final Privilege MARKS_SEARCH = Privilege.getReadOnlyPrivilege(DipURL.MARKS_SEARCH);
 
+    public static final Privilege DIPLOMA = Privilege.getFullPrivilege(DipURL.DIPLOMA);
+
     public String getURL() {
         return URL;
     }

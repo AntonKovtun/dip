@@ -1,0 +1,29 @@
+<%@page pageEncoding="UTF-8" session="true"%>
+<!DOCTYPE html>
+<html>
+<head>
+    <%@include file="../include/header.jsp"%>
+    
+    <title><fmt:message key="dip.ui.title" /></title>
+</head>
+<body>
+	<%@include file="../include/menu-top.jsp"%>
+
+    <div class="container min_H_400">
+
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#">Главная</a></li>
+            <li><a href="#">Профиль</a></li>
+            <li><a href="#">Сообщение</a></li>
+        </ul>
+            Hello, World!
+
+
+    </div> <!-- /container -->
+
+    <%@include file="../include/menu-bottom.jsp"%> 
+
+</body>
+</html>
+
+

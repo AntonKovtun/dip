@@ -16,4 +16,4 @@ CREATE TABLE USERS (
   PRIMARY KEY (USER_ID)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-insert into USERS(USER_ID, NAME, DESCRIPTION, EMAIL, LOGIN, PASSWORD,PHONE,USER_TYPE,STATUS) values('1',"Admin", "","dip@dip.com", "dip@dip.com", "123456","","SuperAdmin","Active");
+insert into USERS(USER_ID, NAME, DESCRIPTION, EMAIL, LOGIN, PASSWORD,PHONE,USER_TYPE,STATUS) values('1',"Admin", "","dip@dip.com", "dip@dip.com", "123","","SuperAdmin","Active");

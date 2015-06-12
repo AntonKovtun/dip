@@ -24,4 +24,6 @@ public class DipURL {
     public static final String CONTACTS="contacts";
     public static final String SERVICES_AMOUNT="services-amount";
 
+    public static final String DIPLOMA="diploma";
+
 }

@@ -25,7 +25,7 @@
         <div class="form-group marB_10">
             <label for="inpLoginEmail" class=" col-sm-2 control-label">E-mail</label>
             <div class="col-sm-3">
-                <input id="inpLoginEmail" class="form-control width_150" type="text" autocomplete="on" placeholder="Email address"/>
+                <input id="inpLoginEmail" value="dip@dip.com" class="form-control width_150" type="text" autocomplete="on" placeholder="Email address"/>
             </div>
         </div>
 
@@ -34,7 +34,7 @@
         <div class="form-group marB_5">
             <label for="inpLoginPassword" class=" col-sm-2 control-label">Пароль</label>
             <div class="col-sm-3">
-                <input id="inpLoginPassword" class="form-control width_150" type="password" placeholder="Password"/>
+                <input id="inpLoginPassword" value="123" class="form-control width_150" type="password" placeholder="Password"/>
 <span id = 'errLog' class='alert alert-danger' role ='alert' style="display: none;">Неверные E-mail или пароль</span>
             </div>
         </div>

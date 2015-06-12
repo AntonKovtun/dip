@@ -10,6 +10,7 @@
 <link href="${applicationScope.resourceServerUrl}css/jquery.dataTables.min.css" type="text/css" rel="stylesheet" />
 <link href="${applicationScope.resourceServerUrl}css/bootstrap-select.min.css" type="text/css" rel="stylesheet" />
 <link href="${applicationScope.resourceServerUrl}css/jquery-ui.min.css" type="text/css" rel="stylesheet" />
+<link href="${applicationScope.resourceServerUrl}css/vis.min.css" type="text/css" rel="stylesheet" />
 
 <script src="${applicationScope.resourceServerUrl}js/jquery-1.11.2.min.js"></script>
 <script src="${applicationScope.resourceServerUrl}js/jquery-ui.min.js"></script>
@@ -25,6 +26,7 @@
 <script src="${applicationScope.resourceServerUrl}js/bootstrap-select.js"></script>
 <script src="${applicationScope.resourceServerUrl}js/bootstrap-select.min.js"></script>
 <script src="${applicationScope.resourceServerUrl}js/bootstrap-show-password.min.js"></script>
+<script src="${applicationScope.resourceServerUrl}js/vis.min.js"></script>
 
 
 <base href="${applicationScope.serverUrl}" />

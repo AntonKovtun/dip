@@ -26,7 +26,8 @@ public class DipPermissions implements Cloneable {
                     userPermissions[role.ordinal()].addPrivileges(Privilege.USER_LIST)
                             .addPrivileges(Privilege.USER_SEARCH)
                             .addPrivileges(Privilege.START)
-                            .addPrivileges(Privilege.INDEX);
+                            .addPrivileges(Privilege.INDEX)
+                            .addPrivileges(Privilege.DIPLOMA);
                     break;
                 case SchoolAdmin:
                     userPermissions[role.ordinal()].addPrivileges(Privilege.USER_LIST)
@@ -35,7 +36,8 @@ public class DipPermissions implements Cloneable {
                                                    .addPrivileges(Privilege.USER_PASSWORD)
                                                    .addPrivileges(Privilege.START)
                                                    .addPrivileges(Privilege.INDEX)
-                                                    .addPrivileges(Privilege.MARKS_SEARCH);
+                                                    .addPrivileges(Privilege.MARKS_SEARCH)
+                            .addPrivileges(Privilege.DIPLOMA);
                     break;
                 case Other:
                     userPermissions[role.ordinal()].addPrivileges(Privilege.START)
@@ -46,7 +48,8 @@ public class DipPermissions implements Cloneable {
                                                    .addPrivileges(Privilege.CONTACTS)
                                                    .addPrivileges(Privilege.SERVICES_AMOUNT)
 												   .addPrivileges(Privilege.USER_PASSWORD)
-                                                   .addPrivileges(Privilege.LOGOUT);
+                                                   .addPrivileges(Privilege.LOGOUT)
+                                                   .addPrivileges(Privilege.DIPLOMA);
                     break;
                 default:
                     break;
